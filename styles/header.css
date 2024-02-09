@@ -1,0 +1,64 @@
+.cabecalho {
+    align-items: center;
+    background-color: var(--header-bg-color);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.cabecalho__menu-hamburguer {
+    background-image: url("../assets/Menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.lista-menu__titulo {
+    color: var(--lista-menu-title-color);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--lista-menu-link-color);
+
+    /* Colocar a cor do background somente no texto.  */
+    background-clip: text;
+
+    text-transform: uppercase;
+
+    /* Esses webkit serve para funcionarem a cor somente no texto em outros navegadores. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    background-color: var(--header-bg-color);
+    padding: 1em;
+}
+
+/* Se o elemento estiver com o estado 'checked', todos os próximos elementos irmãos com a classe 'lista-menu' vão ser estilizados. */
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}

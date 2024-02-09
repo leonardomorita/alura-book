@@ -1,7 +1,17 @@
+@import url('./header.css');
+@import url('./banner.css');
+
 :root {
     --bg-color: #EBECEE;
+    --header-bg-color: #FFFFFF;
+    --lista-menu-title-color: #EB9B00;
+    --lista-menu-link-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --main-font: 'Poppins', sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
+    font-family: var(--main-font);
+    font-size: 1rem;
+    font-weight: 400;
 }
