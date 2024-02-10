@@ -19,6 +19,14 @@
     padding: 1em;
 }
 
+.container__titulo {
+    display: none;
+}
+
+.cabecalho__opcoes {
+    display: none;
+}
+
 .cabecalho__menu-hamburguer {
     background-image: url("../assets/Menu.svg");
     background-position: center;
@@ -61,4 +69,51 @@
 /* Se o elemento estiver com o estado 'checked', todos os próximos elementos irmãos com a classe 'lista-menu' vão ser estilizados. */
 .container__botao:checked ~ .lista-menu {
     display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .container__titulo {
+        display: block;
+        font-weight: 400;
+    }
+
+    .container__titulo__negrito {
+        font-weight: 700;
+    }
+
+    .container__titulo, .container__titulo__negrito {
+        font-family: var(--secondary-font);
+        font-size: 1.875rem;
+    }
+
+    .cabecalho__opcoes {
+        display: flex;
+    }
+
+    .cabecalho__opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .cabecalho__opcoes__item__link {
+        color: var(--cabecalho-opcoes-item-link-color);
+        text-decoration: none;
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabecalho__opcoes__menu {
+        display: none;
+    }
+
+    .cabecalho__opcoes__menu:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
 }

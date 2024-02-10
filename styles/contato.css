@@ -34,3 +34,24 @@
     font-family: var(--main-font);
     padding-left: 2em;
 }
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contato__descricao {
+        margin-right: 1em;
+        width: 30%;
+    }
+
+    .contato__titulo {
+        font-size: 1.5rem;
+    }
+
+    .contato__email {
+        width: 30%;
+    }
+}

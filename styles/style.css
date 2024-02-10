@@ -10,8 +10,13 @@
     --header-bg-color: #FFFFFF;
     --lista-menu-title-color: #EB9B00;
     --lista-menu-link-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    --main-font: 'Poppins', sans-serif;
     --descricao-titulo-livro-color: #002F52;
+    --cabecalho-opcoes-item-link-color: #000;
+    --rodape-lista-titulo-color: #858585;
+    --rodape-lista-item-link-color: #474646;
+
+    --main-font: 'Poppins', sans-serif;
+    --secondary-font: 'Josefin Sans', sans-serif;
 }
 
 body {
