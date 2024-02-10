@@ -33,4 +33,15 @@
     .topicos__titulo, .topicos__lista__item__link {
         font-size: 1.5rem;
     }
+
+    .topicos__lista__item__link:hover {
+        background-color: var(--header-bg-color);
+        color: var(--lista-menu-title-color);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos {
+        padding: 3em 25vw;
+    }
 }

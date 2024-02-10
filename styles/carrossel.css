@@ -94,4 +94,45 @@
         margin: 2em auto;
         width: 40%;
     }
+
+    .botoes__item:hover {
+        cursor: pointer;
+    }
+    
+    .botoes__ancora:hover {
+        background-color: #e6af41;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .carrossel__container {
+        align-items: center;
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .card {
+        width: 60%;
+        margin-left: 3em;
+    }
+
+    .descricao {
+        margin-right: 1.5em;
+    }
+
+    .descricao__titulo {
+        font-size: 1.6rem;
+    }
+
+    .descricao__texto {
+        font-size: 1rem;;
+    }
 }

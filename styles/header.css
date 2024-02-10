@@ -66,6 +66,18 @@
     padding: 1em;
 }
 
+.container__texto {
+    display: none;
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background: var(--lista-menu-link-color);
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url('./../assets/Menu\ Aberto.svg');
+}
+
 /* Se o elemento estiver com o estado 'checked', todos os próximos elementos irmãos com a classe 'lista-menu' vão ser estilizados. */
 .container__botao:checked ~ .lista-menu {
     display: block;
@@ -95,7 +107,8 @@
     }
 
     .cabecalho__opcoes__item {
-        padding: 0 1em;
+        cursor: pointer;
+        padding: 2em 1em;
         text-transform: uppercase;
     }
 
@@ -112,8 +125,58 @@
         display: none;
     }
 
+    .cabecalho__opcoes__rotulo:hover {
+        background-color: var(--bg-color);
+    }
+
+    .cabecalho__opcoes__item__link:hover {
+        color: var(--lista-menu-title-color);
+    }
+
+    .lista-menu__item:hover {
+        background: var(--lista-menu-link-color);
+    }    
+
+    .lista-menu__item:hover > .lista-menu__link {
+        text-decoration: none;
+
+        /* Trocar a cor da fonte */
+        -webkit-text-fill-color: var(--header-bg-color);
+    }
+
+    .cabecalho__opcoes__menu:checked ~ .cabecalho__opcoes__rotulo > .cabecalho__opcoes__item {
+        background: var(--lista-menu-link-color);
+        color: var(--header-bg-color);
+    }
+
     .cabecalho__opcoes__menu:checked ~ .lista-menu {
         display: block;
         width: auto;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .cabecalho__opcoes {
+        margin-left: 2rem;
+        margin-right: auto;
+    }
+
+    .container__link {
+        align-items: center;
+        color: var(--cabecalho-opcoes-item-link-color);
+        display: flex;
+        text-decoration: none;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link:hover > .container__texto {
+        color: var(--lista-menu-title-color);
     }
 }
