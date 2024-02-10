@@ -1,5 +1,9 @@
 @import url('./header.css');
 @import url('./banner.css');
+@import url('./carrossel.css');
+@import url('./topicos.css');
+@import url('./contato.css');
+@import url('./rodape.css');
 
 :root {
     --bg-color: #EBECEE;
@@ -7,6 +11,7 @@
     --lista-menu-title-color: #EB9B00;
     --lista-menu-link-color: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     --main-font: 'Poppins', sans-serif;
+    --descricao-titulo-livro-color: #002F52;
 }
 
 body {
