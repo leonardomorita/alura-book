@@ -1,63 +1,63 @@
-.contato {
-    background-color: var(--header-bg-color);
-    padding: 1em;
+.conteudo__contato {
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
 }
 
-.contato__titulo {
+.conteudo__contato__titulo {
     font-size: 1.125rem;
     font-weight: 500;
 }
 
-.contato__texto {
+.conteudo__contato__texto {
+    margin: 1rem 0;
     font-weight: 300;
-    margin: 1em 0;
 }
 
-.contato__titulo, .contato__texto {
-    background: var(--lista-menu-link-color);
+.conteudo__contato__titulo, .conteudo__contato__texto {
+    background: var(--cor-destaque);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
-.contato__email {
-    border: 1px solid var(--descricao-titulo-livro-color);
-    border-radius: 24px;
-    color: var(--descricao-titulo-livro-color);
-    padding: 1em;
+.conteudo__contato__email {
+    padding: 1rem;
     width: 90%;
+    border: 1px solid var(--cor-quaternaria);
+    border-radius: 1.5rem;
+    color: var(--cor-quaternaria);
 }
 
-.contato__email::placeholder {
-    background: url('./../assets/Email.svg') no-repeat;
-    color: var(--descricao-titulo-livro-color);
-    font-family: var(--main-font);
-    padding-left: 2em;
+.conteudo__contato__email::placeholder {
+    padding-left: 2rem;
+    background: url('./../assets/email.svg') no-repeat;
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte);
 }
 
 @media screen and (min-width: 1024px) {
-    .contato {
-        align-items: center;
+    .conteudo__contato {
         display: flex;
+        align-items: center;
         justify-content: center;
+        gap: 1rem;
     }
 
-    .contato__descricao {
-        margin-right: 1em;
+    .conteudo__contato__descricao {
         width: 30%;
     }
 
-    .contato__titulo {
+    .conteudo__contato__titulo {
         font-size: 1.5rem;
     }
-
-    .contato__email {
+    
+    .conteudo__contato__email {
         width: 30%;
     }
 }
 
 @media screen and (min-width: 1728px) {
-    .contato {
-        padding: 3em 20vw;
+    .conteudo__contato {
+        padding: 3rem 23vw;
     }
 }
