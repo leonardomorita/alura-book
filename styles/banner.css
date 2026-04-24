@@ -1,66 +1,64 @@
-.banner {
-    background: var(--lista-menu-link-color);
-    color: var(--header-bg-color);
-    padding: 2.5em 2em;
+.conteudo__banner {
+    padding: 2.5rem 2rem;
+    background: var(--cor-destaque);
+    color: var(--cor-secundaria);
     text-align: center;
 }
 
-.banner__titulo {
+.conteudo__banner__titulo {
     font-size: 1.125rem;
     font-weight: 700;
 }
 
-.banner__texto {
+.conteudo__bannner_texto {
+    margin: 1rem 0;
     font-weight: 500;
-    margin: 1em 0;
 }
 
-.banner__pesquisa {
-    background-color: transparent;
-    border: 1px solid var(--header-bg-color);
-    border-radius: 24px;
-    color: var(--header-bg-color);
-    padding: 1em;
+.conteudo__banner__pesquisa {
+    padding: 1rem;
     width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 1.5rem;
+    color: var(--cor-secundaria);
 }
 
-/* elemento:nome pseudo-classe */
-/* elemento::nome pseudo-elemento */
-
-.banner__pesquisa::placeholder {
-    background: url('./../assets/Lupa.svg') no-repeat;
-    background-position: 1em;
-    color: var(--header-bg-color);
-    font-family: var(--main-font);
+.conteudo__banner__pesquisa::placeholder {
+    text-align: center;
+    background: url('./../assets/lupa.svg') no-repeat;
+    background-position: 1rem;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte);
     font-size: 0.875rem;
     font-weight: 400;
-    text-align: center;
 }
 
+/* TABLET */
 @media screen and (min-width: 1024px) {
-    .banner__titulo {
+    .conteudo__banner__titulo {
         font-size: 2.25rem;
     }
 
-    .banner__pesquisa {
+    .conteudo__banner__pesquisa {
         width: 50%;
     }
 
-    .banner__pesquisa::placeholder {
-        background-position: 6em;
+    .conteudo__banner__pesquisa::placeholder {
+        background-position: 5rem;
     }
 }
 
 @media screen and (min-width: 1728px) {
-    .banner {
-        padding: 5em 0;
+    .conteudo__banner {
+        padding: 5rem 0;
     }
 
-    .banner__pesquisa {
+    .conteudo__banner__pesquisa {
         width: 35%;
     }
 
-    .banner__pesquisa::placeholder {
-        background-position: 10em;
+    .conteudo__banner__pesquisa::placeholder {
+        background-position: 8rem;
     }
 }

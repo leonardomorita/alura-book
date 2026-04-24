@@ -1,79 +1,80 @@
-.carrossel__titulo {
-    background-color: var(--header-bg-color);
-    color: var(--lista-menu-title-color);
+.conteudo__carrossel__titulo {
+    padding: 1rem 0 0.5rem 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     font-size: 1.125rem;
     font-weight: 700;
-    padding: 1em 0 0.5em 0;
     text-align: center;
     text-transform: uppercase;
 }
 
 .swiper-pagination {
     position: initial;
-    margin: .5em 0;
+    margin: 0.5rem 0;
 }
 
 .swiper-slide img {
-    width: 100%
+    width: 100%;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-next, .swiper-button-prev {
     display: none;
 }
 
-.card {
-    background: var(--header-bg-color);
-    border-radius: 10px;
+.conteudo__carrossel__card {
+    margin: 1rem;
+    padding: 1rem;
+    background: var(--cor-secundaria);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 1em;
-    padding: 1em;
+    border-radius: 10px;
 }
 
-.card__descricao {
+.conteudo__carrossel__card__informacao {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
-.descricao__titulo {
-    color: var(--lista-menu-title-color);
+.conteudo__carrossel__card__informacao__descricao__titulo {
+    color: var(--cor-terciaria);
     font-weight: 700;
 }
 
-.descricao__titulo-livro {
-    color: var(--descricao-titulo-livro-color);
+.conteudo__carrossel__card__informacao__descricao__livro {
+    margin: 0.5rem 0;
+    color: var(--cor-quaternaria);
     font-size: 1.125rem;
     font-weight: 700;
-    margin: 0.5em 0;
 }
 
-.descricao__texto {
+.conteudo__carrossel__card__informacao__descricao__texto {
+    margin-right: 0.5rem;
     font-size: 0.875rem;
 }
 
-.card__botoes {
+.conteudo__carrossel__card__botoes {
     display: flex;
     justify-content: space-between;
 }
 
-.botoes {
+.conteudo__carrossel__card__botoes__lista {
     display: flex;
 }
 
-.botoes__item {
-    margin: 0 0.5em;
+.conteudo__carrossel__card__botoes__lista__item {
+    margin: 0 0.5rem;
 }
 
-.botoes__ancora {
-    background-color: var(--lista-menu-title-color);
-    color: var(--header-bg-color);
+.conteudo__carrossel__card__botoes__ancora {
+    padding: 1rem 2.3rem;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
     font-weight: 700;
-    padding: 1em 2.2em;
     text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .carrossel__titulo {
+    .conteudo__carrossel__titulo {
         font-size: 1.625rem;
     }
 
@@ -82,33 +83,25 @@
     }
 
     .swiper-pagination {
-        margin: 2em 0 3em 0;
+        margin: 2rem 0 3em 0;
     }
 
-    .swiper-button-prev, .swiper-button-next {
+    #swiper-button-next, #swiper-button-prev, #swiper-button-next-2, #swiper-button-prev-2 {
         display: block;
         top: 60%;
     }
 
-    .card {
-        margin: 2em auto;
+    .conteudo__carrossel__card {
+        margin: 2rem auto;
         width: 40%;
-    }
-
-    .botoes__item:hover {
-        cursor: pointer;
-    }
-    
-    .botoes__ancora:hover {
-        background-color: #e6af41;
     }
 }
 
 @media screen and (min-width: 1728px) {
-    .carrossel__container {
-        align-items: center;
+    .conteudo__carrossel__container {
         display: flex;
-        margin: 0 20vw 3em 20vw;
+        align-items: center;
+        margin: 0 20vw 3rem 20vw;
     }
 
     .swiper {
@@ -116,23 +109,32 @@
     }
 
     .swiper-pagination {
-        margin: 1em 0;
+        margin: 0.5rem 0;
     }
 
-    .card {
+    .conteudo__carrossel__card {
         width: 60%;
-        margin-left: 3em;
+        margin-left: 3rem;
     }
 
-    .descricao {
-        margin-right: 1.5em;
+    .conteudo__carrossel__card__informacao__descricao__titulo {
+        font-size: 1.5rem;
     }
 
-    .descricao__titulo {
-        font-size: 1.6rem;
+    .conteudo__carrossel__card__informacao__descricao__texto {
+        font-size: 1rem;
     }
 
-    .descricao__texto {
-        font-size: 1rem;;
+    .conteudo__carrossel__card__botoes__ancora:hover {
+        opacity: 0.8;
+        color: var(--cor-ancora-cabecalho);
+    }
+
+    .conteudo__carrossel__card__botoes__lista__item__favoritos:hover {
+        width: 40px;
+    }
+
+    .conteudo__carrossel__card__botoes__lista__item__sacola:hover {
+        width: 31px;
     }
 }

@@ -1,183 +1,177 @@
 .cabecalho {
-    align-items: center;
-    background-color: var(--header-bg-color);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: relative;
+
+    background-color: var(--cor-secundaria);
 }
 
-.container {
-    align-items: center;
+.cabecalho__container {
     display: flex;
+    align-items: center;
 }
 
-.container__botao {
-    display: none;
-}
-
-.container__imagem {
-    padding: 1em;
-}
-
-.container__titulo {
-    display: none;
-}
-
-.cabecalho__opcoes {
-    display: none;
-}
-
-.cabecalho__menu-hamburguer {
-    background-image: url("../assets/Menu.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+.cabecalho__container__menu-hamburguer {
     display: inline-block;
+
     height: 1.5rem;
     width: 1.5rem;
+    
+    background-image: url('./../assets/menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.lista-menu {
+.cabecalho__container__imagem {
+    padding: 1rem;
+}
+
+.cabecalho__container__lista-menu {
     display: none;
     position: absolute;
     top: 100%;
-    width: 60vw;
     z-index: 2;
+    width: 60vw;
 }
 
-.lista-menu__titulo {
-    color: var(--lista-menu-title-color);
-    font-weight: 700;
-}
-
-.lista-menu__link {
-    background: var(--lista-menu-link-color);
-
-    /* Colocar a cor do background somente no texto.  */
-    background-clip: text;
-
-    text-transform: uppercase;
-
-    /* Esses webkit serve para funcionarem a cor somente no texto em outros navegadores. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.lista-menu__titulo, .lista-menu__item {
-    background-color: var(--header-bg-color);
-    padding: 1em;
-}
-
-.container__texto {
-    display: none;
-}
-
-.container__botao:checked ~ .container__rotulo {
-    background: var(--lista-menu-link-color);
-}
-
-.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
-    background-image: url('./../assets/Menu\ Aberto.svg');
-}
-
-/* Se o elemento estiver com o estado 'checked', todos os próximos elementos irmãos com a classe 'lista-menu' vão ser estilizados. */
-.container__botao:checked ~ .lista-menu {
+.cabecalho__container__botao:checked ~ .cabecalho__container__lista-menu {
     display: block;
 }
 
+.cabecalho__container__botao:checked ~ .cabecalho__container__rotulo {
+    background: var(--cor-destaque);
+}
+
+.cabecalho__container__botao:checked ~ .cabecalho__container__rotulo > .cabecalho__container__menu-hamburguer {
+    background-image: url('./../assets/menu-aberto.svg');
+}
+
+.cabecalho__container__lista-menu__titulo {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+.cabecalho__container__lista-menu__titulo, .cabecalho__container__lista-menu__item {
+    padding: 1rem;
+
+    background-color: var(--cor-secundaria);
+}
+
+.cabecalho__container__lista-menu__link {
+    background: var(--cor-destaque);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cabecalho__container__botao,
+.cabecalho__container__titulo,
+.cabecalho__opcoes,
+.cabecalho__container__texto {
+    display: none;
+}
+
+/* TABLET */
 @media screen and (min-width: 1024px) {
-    .cabecalho__menu-hamburguer {
+    #cabecalho__container__favoritos, .cabecalho__container__menu-hamburguer {
         display: none;
     }
 
-    .container__titulo {
+    .cabecalho__container__logo {
+        padding: 1rem;
+    }
+
+    .cabecalho__container__titulo {
         display: block;
         font-weight: 400;
     }
 
-    .container__titulo__negrito {
+    .cabecalho__container__titulo__negrito {
         font-weight: 700;
     }
 
-    .container__titulo, .container__titulo__negrito {
-        font-family: var(--secondary-font);
+    .cabecalho__container__titulo, .cabecalho__container__titulo__negrito {
+        font-family: var(--fonte-secundaria);
         font-size: 1.875rem;
     }
 
     .cabecalho__opcoes {
         display: flex;
-    }
-
-    .cabecalho__opcoes__item {
-        cursor: pointer;
-        padding: 2em 1em;
-        text-transform: uppercase;
-    }
-
-    .cabecalho__opcoes__item__link {
-        color: var(--cabecalho-opcoes-item-link-color);
-        text-decoration: none;
-    }
-
-    .container__imagem-transparente {
-        display: none;
+        gap: 2rem;
     }
 
     .cabecalho__opcoes__menu {
         display: none;
     }
 
-    .cabecalho__opcoes__rotulo:hover {
-        background-color: var(--bg-color);
-    }
-
-    .cabecalho__opcoes__item__link:hover {
-        color: var(--lista-menu-title-color);
-    }
-
-    .lista-menu__item:hover {
-        background: var(--lista-menu-link-color);
-    }    
-
-    .lista-menu__item:hover > .lista-menu__link {
-        text-decoration: none;
-
-        /* Trocar a cor da fonte */
-        -webkit-text-fill-color: var(--header-bg-color);
+    .cabecalho__opcoes__menu:checked ~ .cabecalho__container__lista-menu {
+        display: block;
+        width: auto;
     }
 
     .cabecalho__opcoes__menu:checked ~ .cabecalho__opcoes__rotulo > .cabecalho__opcoes__item {
-        background: var(--lista-menu-link-color);
-        color: var(--header-bg-color);
+        background: var(--cor-destaque);
+        color: var(--cor-secundaria);
     }
 
-    .cabecalho__opcoes__menu:checked ~ .lista-menu {
-        display: block;
-        width: auto;
+    .cabecalho__opcoes__item {
+        padding: 2rem 1rem;
+        text-transform: uppercase;
+    }
+
+    .cabecalho__opcoes__item__link {
+        color: var(--cor-ancora-cabecalho);
+        text-decoration: none;
     }
 }
 
 @media screen and (min-width: 1728px) {
     .cabecalho {
-        padding: 0 2em;
+        padding: 0 2rem;
+    }
+
+    .cabecalho__container {
+        margin-right: 1rem;
     }
 
     .cabecalho__opcoes {
-        margin-left: 2rem;
+        gap: 0.5rem;
         margin-right: auto;
     }
 
-    .container__link {
-        align-items: center;
-        color: var(--cabecalho-opcoes-item-link-color);
+    .cabecalho__opcoes__rotulo:hover {
+        cursor: pointer;
+    }
+
+    .cabecalho__opcoes__item__link:hover {
+        text-decoration: underline;
+    }
+
+    .cabecalho__container__link {
         display: flex;
+        align-items: center;
+        color: var(--cor-ancora-cabecalho);
         text-decoration: none;
     }
 
-    .container__texto {
+    .cabecalho__container__link:hover > .cabecalho__container__texto {
+        text-decoration: underline;
+    }
+
+    .cabecalho__container__texto {
         display: block;
     }
 
-    .container__link:hover > .container__texto {
-        color: var(--lista-menu-title-color);
+    .cabecalho__container__lista-menu__item:hover {
+        background: var(--cor-destaque);
+        cursor: pointer;
+    }
+
+    .cabecalho__container__lista-menu__item:hover > .cabecalho__container__lista-menu__link {
+        -webkit-text-fill-color: var(--cor-secundaria);
     }
 }
